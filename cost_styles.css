@@ -1,101 +1,90 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+/* Enhanced Styles */
+/* Add these to existing styles.css */
+
+/* Icons and Header Styles */
+.dashboard-title i {
+    margin-right: 12px;
+    color: #6c5ce7;
 }
 
-body {
-    background-color: #f8f9fa;
-    color: #2d3436;
-    padding: 2rem;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.dashboard-title {
-    margin-bottom: 2rem;
-    font-weight: 600;
-    font-size: 2rem;
-}
-
-.section-title {
+.section-header {
     margin: 2rem 0 1.5rem;
-    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
 }
 
-/* Currency Grid */
-.currency-grid {
+.section-header h2 {
+    font-size: 1.25rem;
+    color: #2d3436;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Currency Card Enhancements */
+.currency-icon {
+    background: rgba(255,255,255,0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.currency-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
+    place-items: center;
+    margin-bottom: 1rem;
 }
 
 .card-header {
-    padding: 1rem;
-    color: white;
-}
-
-.card-header h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.jpp-bg { background-color: #6c5ce7; }
-.qr-bg { background-color: #00b894; }
-.usd-bg { background-color: #a66efa; }
-
-.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 1.5rem;
 }
 
-.metric-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: #636e72;
+.metric-grid {
+    display: grid;
+    gap: 1rem;
 }
 
-.highlight {
-    font-weight: 600;
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.metric-item.highlight {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+.metric-label {
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+.metric-value {
+    font-weight: 500;
     color: #2d3436;
 }
 
-.toggle-btn {
-    width: 100%;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-    color: #6c5ce7;
-    cursor: pointer;
-    font-weight: 500;
+/* Expanded State */
+.currency-card .expanded {
+    display: none;
 }
 
-/* Cost Items Grid */
-.cost-items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+.currency-card.expanded .expanded {
+    display: block;
 }
 
-.cost-item-card {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* Cost Item Enhancements */
+.currency-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
 }
 
 .item-header {
@@ -105,64 +94,40 @@ body {
     margin-bottom: 1rem;
 }
 
-.item-number {
-    font-weight: 600;
-    color: #2d3436;
-}
-
-.currency-pill {
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    color: white;
-}
-
-.item-desc {
+.action-icon {
     color: #636e72;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
-.amount-group {
-    display: grid;
-    gap: 1rem;
+.item-title {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
-.amount-row {
+.amount-item {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.status-indicator {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #00b894;
+    display: flex;
     align-items: center;
+    gap: 8px;
 }
 
-.amount-row span:first-child {
-    color: #636e72;
-}
-
-.amount-row span:last-child {
-    font-weight: 500;
-    color: #2d3436;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .currency-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .cost-items-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .container {
-        padding: 1rem;
-    }
-}
+/* Color Enhancements */
+.jpp-bg { background: #6c5ce7; }
+.qr-bg { background: #00b894; }
+.usd-bg { background: #a66efa; }
 
 /* Hover Effects */
-.cost-item-card:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s ease;
-}
-
-.toggle-btn:hover {
-    opacity: 0.8;
+.cost-item-card:hover .action-icon {
+    color: #6c5ce7;
 }
