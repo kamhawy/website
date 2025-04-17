@@ -1,0 +1,168 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #2d3436;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-title {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.section-title {
+    margin: 2rem 0 1.5rem;
+    font-weight: 500;
+}
+
+/* Currency Grid */
+.currency-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.currency-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1rem;
+    color: white;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.jpp-bg { background-color: #6c5ce7; }
+.qr-bg { background-color: #00b894; }
+.usd-bg { background-color: #a66efa; }
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #636e72;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: #6c5ce7;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Cost Items Grid */
+.cost-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.cost-item-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.item-number {
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.currency-pill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.item-desc {
+    color: #636e72;
+    margin-bottom: 1.5rem;
+}
+
+.amount-group {
+    display: grid;
+    gap: 1rem;
+}
+
+.amount-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-row span:first-child {
+    color: #636e72;
+}
+
+.amount-row span:last-child {
+    font-weight: 500;
+    color: #2d3436;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .currency-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cost-items-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Hover Effects */
+.cost-item-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+    opacity: 0.8;
+}
