@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Summary Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="dashboard-title">Cost Summary</h1>
+        
+        <!-- Currency Summary Section -->
+        <div class="currency-grid">
+            <!-- JPP Card -->
+            <div class="currency-card">
+                <div class="card-header jpp-bg">
+                    <h3>JPP - Japanese Yen</h3>
+                </div>
+                <div class="card-body">
+                    <div class="metric-row">
+                        <span>Original Cost</span>
+                        <span>¥9,000.00</span>
+                    </div>
+                    <div class="metric-row highlight">
+                        <span>Equivalent Total Cost</span>
+                        <span>$57.60</span>
+                    </div>
+                    <button class="toggle-btn">Show Details</button>
+                </div>
+            </div>
+
+            <!-- QR Card -->
+            <div class="currency-card">
+                <div class="card-header qr-bg">
+                    <h3>QR - Quaint Riyals</h3>
+                </div>
+                <div class="card-body">
+                    <div class="metric-row">
+                        <span>Original Cost</span>
+                        <span>QR4,100.00</span>
+                    </div>
+                    <div class="metric-row highlight">
+                        <span>Equivalent Total Cost</span>
+                        <span>$1,123.32</span>
+                    </div>
+                    <button class="toggle-btn">Show Details</button>
+                </div>
+            </div>
+
+            <!-- USD Card -->
+            <div class="currency-card">
+                <div class="card-header usd-bg">
+                    <h3>USD - US Dollars</h3>
+                </div>
+                <div class="card-body">
+                    <div class="metric-row">
+                        <span>Original Cost</span>
+                        <span>$50,000.00</span>
+                    </div>
+                    <div class="metric-row highlight">
+                        <span>Equivalent Total Cost</span>
+                        <span>$50,000.00</span>
+                    </div>
+                    <button class="toggle-btn">Show Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cost Items Section -->
+        <h2 class="section-title">Cost Items</h2>
+        <div class="cost-items-grid">
+            <!-- Cost Item 4-1 -->
+            <div class="cost-item-card">
+                <div class="item-header">
+                    <span class="item-number">4-1</span>
+                    <span class="currency-pill jpp-bg">JPP</span>
+                </div>
+                <div class="item-body">
+                    <p class="item-desc">Update to USD</p>
+                    <div class="amount-group">
+                        <div class="amount-row">
+                            <span>Cost Value</span>
+                            <span>¥9,000.00</span>
+                        </div>
+                        <div class="amount-row">
+                            <span>Amounts</span>
+                            <span>$57.60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cost Item 4-2 -->
+            <div class="cost-item-card">
+                <div class="item-header">
+                    <span class="item-number">4-2</span>
+                    <span class="currency-pill qr-bg">QR</span>
+                </div>
+                <div class="item-body">
+                    <p class="item-desc">Cost Item 2</p>
+                    <div class="amount-group">
+                        <div class="amount-row">
+                            <span>Cost Value</span>
+                            <span>QR4,100.00</span>
+                        </div>
+                        <div class="amount-row">
+                            <span>Amounts</span>
+                            <span>$1,123.32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cost Item 4-3 -->
+            <div class="cost-item-card">
+                <div class="item-header">
+                    <span class="item-number">4-3</span>
+                    <span class="currency-pill usd-bg">USD</span>
+                </div>
+                <div class="item-body">
+                    <p class="item-desc">Cost Item 3</p>
+                    <div class="amount-group">
+                        <div class="amount-row">
+                            <span>Cost Value</span>
+                            <span>$50,000.00</span>
+                        </div>
+                        <div class="amount-row">
+                            <span>Amounts</span>
+                            <span>$50,000.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
