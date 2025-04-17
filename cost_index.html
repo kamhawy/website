@@ -3,137 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cost Summary Dashboard</title>
+    <title>Enhanced Cost Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="dashboard-title">Cost Summary</h1>
+        <h1 class="dashboard-title"><i class="fas fa-coins"></i> Cost Summary</h1>
         
         <!-- Currency Summary Section -->
+        <div class="section-header">
+            <h2><i class="fas fa-wallet"></i> Currency Summary</h2>
+        </div>
         <div class="currency-grid">
             <!-- JPP Card -->
             <div class="currency-card">
                 <div class="card-header jpp-bg">
-                    <h3>JPP - Japanese Yen</h3>
+                    <div class="currency-icon">
+                        <i class="fas fa-yen-sign"></i>
+                    </div>
+                    <h3>Japanese Yen (JPP)</h3>
                 </div>
                 <div class="card-body">
-                    <div class="metric-row">
-                        <span>Original Cost</span>
-                        <span>¥9,000.00</span>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <span class="metric-label">Original Cost</span>
+                            <span class="metric-value">¥9,000.00</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Additional Cost</span>
+                            <span class="metric-value">¥0.00</span>
+                        </div>
+                        <div class="metric-item highlight">
+                            <span class="metric-label">Equivalent Total Cost</span>
+                            <span class="metric-value">$57.60</span>
+                        </div>
+                        <div class="metric-item expanded">
+                            <span class="metric-label">Export</span>
+                            <span class="metric-value">¥1,123.32</span>
+                        </div>
+                        <div class="metric-item expanded">
+                            <span class="metric-label">Refresh</span>
+                            <span class="metric-value">¥50,000.00</span>
+                        </div>
                     </div>
-                    <div class="metric-row highlight">
-                        <span>Equivalent Total Cost</span>
-                        <span>$57.60</span>
-                    </div>
-                    <button class="toggle-btn">Show Details</button>
+                    <button class="toggle-btn">
+                        <i class="fas fa-chevron-down"></i> Full Details
+                    </button>
                 </div>
             </div>
 
             <!-- QR Card -->
             <div class="currency-card">
                 <div class="card-header qr-bg">
-                    <h3>QR - Quaint Riyals</h3>
+                    <div class="currency-icon">
+                        <i class="fas fa-dong-sign"></i>
+                    </div>
+                    <h3>Quaint Riyals (QR)</h3>
                 </div>
                 <div class="card-body">
-                    <div class="metric-row">
-                        <span>Original Cost</span>
-                        <span>QR4,100.00</span>
-                    </div>
-                    <div class="metric-row highlight">
-                        <span>Equivalent Total Cost</span>
-                        <span>$1,123.32</span>
-                    </div>
-                    <button class="toggle-btn">Show Details</button>
+                    <!-- Similar metric structure as JPP card -->
                 </div>
             </div>
 
             <!-- USD Card -->
             <div class="currency-card">
                 <div class="card-header usd-bg">
-                    <h3>USD - US Dollars</h3>
+                    <div class="currency-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>US Dollars (USD)</h3>
                 </div>
                 <div class="card-body">
-                    <div class="metric-row">
-                        <span>Original Cost</span>
-                        <span>$50,000.00</span>
-                    </div>
-                    <div class="metric-row highlight">
-                        <span>Equivalent Total Cost</span>
-                        <span>$50,000.00</span>
-                    </div>
-                    <button class="toggle-btn">Show Details</button>
+                    <!-- Similar metric structure as JPP card -->
                 </div>
             </div>
         </div>
 
         <!-- Cost Items Section -->
-        <h2 class="section-title">Cost Items</h2>
+        <div class="section-header">
+            <h2><i class="fas fa-file-invoice-dollar"></i> Cost Items</h2>
+        </div>
         <div class="cost-items-grid">
-            <!-- Cost Item 4-1 -->
+            <!-- Cost Item Cards with expanded data -->
             <div class="cost-item-card">
                 <div class="item-header">
-                    <span class="item-number">4-1</span>
-                    <span class="currency-pill jpp-bg">JPP</span>
+                    <div class="item-meta">
+                        <span class="item-number">4-1</span>
+                        <div class="currency-tag jpp-bg">
+                            <i class="fas fa-yen-sign"></i> JPP
+                        </div>
+                    </div>
+                    <i class="fas fa-exchange-alt action-icon"></i>
                 </div>
                 <div class="item-body">
-                    <p class="item-desc">Update to USD</p>
-                    <div class="amount-group">
-                        <div class="amount-row">
-                            <span>Cost Value</span>
-                            <span>¥9,000.00</span>
+                    <div class="item-main">
+                        <h4 class="item-title">Update to USD</h4>
+                        <div class="amount-group">
+                            <div class="amount-item">
+                                <span>Original Value</span>
+                                <span>¥9,000.00</span>
+                            </div>
+                            <div class="amount-item highlight">
+                                <span>Converted Value</span>
+                                <span>$57.60</span>
+                            </div>
                         </div>
-                        <div class="amount-row">
-                            <span>Amounts</span>
-                            <span>$57.60</span>
+                    </div>
+                    <div class="item-footer">
+                        <div class="status-indicator">
+                            <i class="fas fa-sync-alt"></i> Auto-Refresh Enabled
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Cost Item 4-2 -->
-            <div class="cost-item-card">
-                <div class="item-header">
-                    <span class="item-number">4-2</span>
-                    <span class="currency-pill qr-bg">QR</span>
-                </div>
-                <div class="item-body">
-                    <p class="item-desc">Cost Item 2</p>
-                    <div class="amount-group">
-                        <div class="amount-row">
-                            <span>Cost Value</span>
-                            <span>QR4,100.00</span>
-                        </div>
-                        <div class="amount-row">
-                            <span>Amounts</span>
-                            <span>$1,123.32</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cost Item 4-3 -->
-            <div class="cost-item-card">
-                <div class="item-header">
-                    <span class="item-number">4-3</span>
-                    <span class="currency-pill usd-bg">USD</span>
-                </div>
-                <div class="item-body">
-                    <p class="item-desc">Cost Item 3</p>
-                    <div class="amount-group">
-                        <div class="amount-row">
-                            <span>Cost Value</span>
-                            <span>$50,000.00</span>
-                        </div>
-                        <div class="amount-row">
-                            <span>Amounts</span>
-                            <span>$50,000.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Additional cost items -->
         </div>
     </div>
+
+    <script>
+        // Toggle expanded view
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.currency-card');
+                card.classList.toggle('expanded');
+                button.querySelector('i').classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
 </body>
 </html>
